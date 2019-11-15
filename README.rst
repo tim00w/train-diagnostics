@@ -20,7 +20,7 @@
    :target: https://github.com/psf/black
    :alt: Code style: black
 
-.. |license| image:: https://img.shields.io/pypi/l/traindiagnostics?color=blue
+.. |license| image:: https://img.shields.io/pypi/l/traindiagnostics?color=purple
    :target: https://github.com/timolesterhuis/train-diagnostics/blob/master/LICENSE
    :alt: PyPI - License
 
@@ -35,7 +35,6 @@ traindiagnostics
 
 A Python library for unevenly-spaced time series analysis in train diagnostics.
 Build on top of the magnificent `ticts <https://github.com/gjeusel/ticts>`_ library.
-
 
 Installation
 ------------
