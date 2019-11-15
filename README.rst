@@ -19,6 +19,9 @@
 
 .. |example| image:: docs/_static/img/example.png
 
+.. |binder| image:: https://mybinder.org/badge_logo.svg
+   :target: https://mybinder.org/v2/gh/timolesterhuis/train-diagnostics/master?filepath=example.ipynb
+
 ================
 traindiagnostics
 ================
@@ -34,7 +37,7 @@ Installation
 
     pip install traindiagnostics
 
-
+Want to try it out first without installing? Use |binder|
 Usage
 -----
 
