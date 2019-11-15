@@ -1,3 +1,24 @@
+.. |travis| image:: https://travis-ci.com/gjeusel/ticts.svg?branch=master
+  :target: https://travis-ci.com/gjeusel/ticts
+.. |readthedocs| image:: https://readthedocs.org/projects/ticts/badge/?version=latest
+  :target: http://ticts.readthedocs.io/en/latest/?badge=latest
+  :alt: Documentation Status
+.. |codecov| image:: https://codecov.io/gh/gjeusel/ticts/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/gjeusel/ticts
+.. |pypi| image:: https://badge.fury.io/py/ticts.svg
+  :target: https://pypi.python.org/pypi/ticts/
+  :alt: Pypi package
+.. |python| image:: https://img.shields.io/badge/python-3.6%2B-blue.svg
+  :target: https://www.python.org/downloads/release/python-360/
+  :alt: Python version 3.5+
+
+.. |logo| image:: docs/_static/img/logo.svg
+   :target: https://github.com/gjeusel/ticts
+   :width: 50px
+   :height: 20px
+
+.. |example| image:: docs/_static/img/example.png
+
 ================
 traindiagnostics
 ================

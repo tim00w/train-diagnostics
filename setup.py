@@ -10,8 +10,12 @@ from os.path import splitext
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
+# Upload version to PyPi:
+#   \-> python setup.py sdist bdist_wheel
+#   \-> python -m twine upload dist/*  # (requires PyPi username & password)
 
-class PyTest(TestCommand):
+
+class PyTest(TestCommand):  # TODO: actually implement tests
     user_options = [("pytest-args=", "a", "Arguments to pass to pytest")]
 
     def initialize_options(self):
@@ -40,7 +44,7 @@ requirements = ["ticts>=0.3.3"]
 
 setup(
     name="traindiagnostics",
-    version="0.1.0",
+    version="0.1.0",  # TODO: implement bumpversion (bump2version) versioning
     author="Timo Lesterhuis",
     author_email="Timo.Lesterhuis@gmail.com",
     description="A toolbox to analyse diagnostic train data!",
@@ -67,7 +71,7 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
-        "License :: OSI Approved :: GNU GPLv3",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
     ],
 )
