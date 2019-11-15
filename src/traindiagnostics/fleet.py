@@ -1,5 +1,4 @@
 import pytz
-import diagnostics as ds
 
 
 class DiagnosticCodes(dict):
@@ -7,7 +6,7 @@ class DiagnosticCodes(dict):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    def codes(self):  # THINKOF: should be only BooleanStateChangeArray?
+    def codes(self):
         return self.keys()
 
     @classmethod
@@ -97,4 +96,4 @@ if __name__ == "__main__":
 
     train_001 = fleet['001']
     train_001.state()
-    train_001.state(utc(dt.datetime(2019,1,1,8,40)))
+    print(train_001.state(utc(dt.datetime(2019,1,1,8,40))))
