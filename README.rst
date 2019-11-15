@@ -19,9 +19,13 @@
 
 .. |example| image:: docs/_static/img/example.png
 
+.. |binder| image:: https://mybinder.org/badge_logo.svg
+   :target: https://mybinder.org/v2/gh/timolesterhuis/train-diagnostics/master?filepath=example.ipynb
+
 ================
 traindiagnostics
 ================
+|binder|
 
 A Python library for unevenly-spaced time series analysis in train diagnostics.
 Build on top of the magnificent `ticts <https://github.com/gjeusel/ticts>`_ library.
@@ -34,6 +38,8 @@ Installation
 
     pip install traindiagnostics
 
+Want to try it out first without installing? With `binder <https://mybinder.org/v2/gh/timolesterhuis/train-diagnostics/master?filepath=example.ipynb>`_
+you can test out the code in an online jupyter notebook.
 
 Usage
 -----
