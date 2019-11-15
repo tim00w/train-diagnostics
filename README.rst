@@ -1,31 +1,37 @@
 .. |travis| image:: https://travis-ci.com/gjeusel/ticts.svg?branch=master
-  :target: https://travis-ci.com/gjeusel/ticts
+   :target: https://travis-ci.com/gjeusel/ticts
+
 .. |readthedocs| image:: https://readthedocs.org/projects/ticts/badge/?version=latest
-  :target: http://ticts.readthedocs.io/en/latest/?badge=latest
-  :alt: Documentation Status
+   :target: http://ticts.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
 .. |codecov| image:: https://codecov.io/gh/gjeusel/ticts/branch/master/graph/badge.svg
-  :target: https://codecov.io/gh/gjeusel/ticts
+   :target: https://codecov.io/gh/gjeusel/ticts
+
 .. |pypi| image:: https://badge.fury.io/py/ticts.svg
-  :target: https://pypi.python.org/pypi/ticts/
-  :alt: Pypi package
-.. |python| image:: https://img.shields.io/badge/python-3.6%2B-blue.svg
-  :target: https://www.python.org/downloads/release/python-360/
-  :alt: Python version 3.5+
+   :target: https://pypi.python.org/pypi/traindiagnostics/
+   :alt: Pypi package
 
-.. |logo| image:: docs/_static/img/logo.svg
-   :target: https://github.com/gjeusel/ticts
-   :width: 50px
-   :height: 20px
+.. |python| image:: https://img.shields.io/pypi/pyversions/traindiagnostics
+   :target: https://www.python.org/downloads/release/python-360/
+   :alt: PyPI - Python Version
 
-.. |example| image:: docs/_static/img/example.png
+.. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+   :alt: Code style: black
+
+.. |license| image:: https://img.shields.io/pypi/l/traindiagnostics?color=blue
+   :target: https://github.com/timolesterhuis/train-diagnostics/blob/master/LICENSE
+   :alt: PyPI - License
 
 .. |binder| image:: https://mybinder.org/badge_logo.svg
    :target: https://mybinder.org/v2/gh/timolesterhuis/train-diagnostics/master?filepath=example.ipynb
+   :alt: Launch Binder
 
 ================
 traindiagnostics
 ================
-|binder|
+|python| |pypi| |license| |black| |binder|
 
 A Python library for unevenly-spaced time series analysis in train diagnostics.
 Build on top of the magnificent `ticts <https://github.com/gjeusel/ticts>`_ library.
