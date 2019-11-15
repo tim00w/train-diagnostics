@@ -21,11 +21,11 @@
    :alt: Code style: black
 
 .. |license| image:: https://img.shields.io/pypi/l/traindiagnostics?color=purple
-   :target: https://github.com/timolesterhuis/train-diagnostics/blob/master/LICENSE
+   :target: https://github.com/timolesterhuis/traindiagnostics/blob/master/LICENSE
    :alt: PyPI - License
 
 .. |binder| image:: https://mybinder.org/badge_logo.svg
-   :target: https://mybinder.org/v2/gh/timolesterhuis/train-diagnostics/master?filepath=example.ipynb
+   :target: https://mybinder.org/v2/gh/timolesterhuis/traindiagnostics/master?filepath=example.ipynb
    :alt: Launch Binder
 
 ================
@@ -43,7 +43,7 @@ Installation
 
     pip install traindiagnostics
 
-Want to try it out first without installing? With `binder <https://mybinder.org/v2/gh/timolesterhuis/train-diagnostics/master?filepath=example.ipynb>`_
+Want to try it out first without installing? With `binder <https://mybinder.org/v2/gh/timolesterhuis/traindiagnostics/master?filepath=example.ipynb>`_
 you can test out the code in an online jupyter notebook.
 
 Usage
