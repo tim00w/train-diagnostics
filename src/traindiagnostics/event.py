@@ -2,10 +2,7 @@ from ticts.utils import timestamp_converter
 
 
 class Event(object):
-    def __init__(self,
-                 t,
-                 value,
-                 name=""):
+    def __init__(self, t, value, name=""):
         """
         :param value:
         :param t:

@@ -2,7 +2,6 @@ import pytz
 
 
 class DiagnosticCodes(dict):
-
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -23,7 +22,6 @@ class DiagnosticCodes(dict):
 
 
 class Train(object):
-
     def __init__(self, name, codes=None):
         if not isinstance(name, str):
             raise TypeError("name needs to be of instance 'str'!")
@@ -40,7 +38,9 @@ class Train(object):
         return {self.name: self.codes.state(t)}
 
 
-def df2statechangearrays(dataframe, train="train", code="code", start="start", end="end", filter_codes=[]):
+def df2statechangearrays(
+    dataframe, train="train", code="code", start="start", end="end", filter_codes=[]
+):
 
     dataframe = dataframe.sort_values(by=[train, code, start])
 
@@ -73,6 +73,7 @@ def df2statechangearrays(dataframe, train="train", code="code", start="start", e
 
     return f
 
+
 def utc(dt):
     return pytz.utc.localize(dt)
 
@@ -82,18 +83,60 @@ if __name__ == "__main__":
     import datetime as dt
 
     df = pd.DataFrame(
-        [dict(train='001', code='a', start=utc(dt.datetime(2019, 1, 1, 8)), end=utc(dt.datetime(2019, 1, 1, 8, 30))),
-         dict(train='002', code='a', start=utc(dt.datetime(2019, 1, 1, 8)), end=utc(dt.datetime(2019, 1, 1, 8, 30))),
-         dict(train='003', code='a', start=utc(dt.datetime(2019, 1, 1, 8)), end=utc(dt.datetime(2019, 1, 1, 8, 30))),
-         dict(train='001', code='b', start=utc(dt.datetime(2019, 1, 1, 8, 30)), end=utc(dt.datetime(2019, 1, 1, 8, 45))),
-         dict(train='001', code='a', start=utc(dt.datetime(2019, 1, 1, 9, 30)), end=utc(dt.datetime(2019, 1, 1, 9, 45))),
-         dict(train='001', code='c', start=utc(dt.datetime(2019, 1, 1, 8)), end=utc(dt.datetime(2019, 1, 1, 9, 45))),
-         dict(train='002', code='b', start=utc(dt.datetime(2019, 1, 1, 8, 30)), end=utc(dt.datetime(2019, 1, 1, 8, 45))),
-         dict(train='001', code='a', start=utc(dt.datetime(2019, 1, 1, 12)), end=utc(dt.datetime(2019, 1, 1, 14, 30)))
-         ])
+        [
+            dict(
+                train="001",
+                code="a",
+                start=utc(dt.datetime(2019, 1, 1, 8)),
+                end=utc(dt.datetime(2019, 1, 1, 8, 30)),
+            ),
+            dict(
+                train="002",
+                code="a",
+                start=utc(dt.datetime(2019, 1, 1, 8)),
+                end=utc(dt.datetime(2019, 1, 1, 8, 30)),
+            ),
+            dict(
+                train="003",
+                code="a",
+                start=utc(dt.datetime(2019, 1, 1, 8)),
+                end=utc(dt.datetime(2019, 1, 1, 8, 30)),
+            ),
+            dict(
+                train="001",
+                code="b",
+                start=utc(dt.datetime(2019, 1, 1, 8, 30)),
+                end=utc(dt.datetime(2019, 1, 1, 8, 45)),
+            ),
+            dict(
+                train="001",
+                code="a",
+                start=utc(dt.datetime(2019, 1, 1, 9, 30)),
+                end=utc(dt.datetime(2019, 1, 1, 9, 45)),
+            ),
+            dict(
+                train="001",
+                code="c",
+                start=utc(dt.datetime(2019, 1, 1, 8)),
+                end=utc(dt.datetime(2019, 1, 1, 9, 45)),
+            ),
+            dict(
+                train="002",
+                code="b",
+                start=utc(dt.datetime(2019, 1, 1, 8, 30)),
+                end=utc(dt.datetime(2019, 1, 1, 8, 45)),
+            ),
+            dict(
+                train="001",
+                code="a",
+                start=utc(dt.datetime(2019, 1, 1, 12)),
+                end=utc(dt.datetime(2019, 1, 1, 14, 30)),
+            ),
+        ]
+    )
 
     fleet = df2statechangearrays(df)
 
-    train_001 = fleet['001']
+    train_001 = fleet["001"]
     train_001.state()
-    print(train_001.state(utc(dt.datetime(2019,1,1,8,40))))
+    print(train_001.state(utc(dt.datetime(2019, 1, 1, 8, 40))))

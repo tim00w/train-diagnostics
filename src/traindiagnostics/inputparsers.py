@@ -33,9 +33,11 @@ def _(dt: str) -> float:
 
 @parse_datetime.register
 def _(dt: np.ndarray) -> np.ndarray:
-    convert = {np.dtype("<M8[ns]"): lambda x: x.astype("int64") / 1e9,
-               np.dtype("<M8[us]"): lambda x: x.astype("int64") / 1e6,
-               np.dtype("<M8[ms]"): lambda x: x.astype("int64") / 1e3}
+    convert = {
+        np.dtype("<M8[ns]"): lambda x: x.astype("int64") / 1e9,
+        np.dtype("<M8[us]"): lambda x: x.astype("int64") / 1e6,
+        np.dtype("<M8[ms]"): lambda x: x.astype("int64") / 1e3,
+    }
     dt = convert.get(dt.dtype, lambda x: x.astype("int64") / 1e0)(dt)
     return dt
 

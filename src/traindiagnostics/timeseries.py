@@ -8,7 +8,6 @@ from .errors import DuplicateDateTimeError
 
 
 class TimeSeries(ticts.TimeSeries):
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.default = 0
@@ -79,15 +78,15 @@ class TimeSeries(ticts.TimeSeries):
         latest_end = None
         for key, value in self.items():
             if value >= value_threshold:
-                mask = slice(key, key+duration)
+                mask = slice(key, key + duration)
                 occurrences = sum(self[mask].values())
                 if occurrences >= repeat_threshold * value_threshold:
                     if latest_end is not None:
                         if key < latest_end:
                             data_new.pop(latest_end)
                     data_new[key] = value
-                    data_new[key+duration] = 0
-                    latest_end = key+duration
+                    data_new[key + duration] = 0
+                    latest_end = key + duration
             else:
                 if data_new.keys():
                     if max(data_new.keys()) <= key:

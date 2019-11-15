@@ -3,11 +3,7 @@ from ticts.utils import timestamp_converter
 
 
 class Report(object):
-
-    def __init__(self,
-                 t0,
-                 te,
-                 name=""):
+    def __init__(self, t0, te, name=""):
         """
 
         :param t0:
@@ -20,8 +16,9 @@ class Report(object):
         self.name = name
 
         if self.te < self.t0:
-            raise ChronologicalError("te ({}) can't be before t0! ({})"
-                                     .format(self.te, self.t0))
+            raise ChronologicalError(
+                "te ({}) can't be before t0! ({})".format(self.te, self.t0)
+            )
 
     def __repr__(self):
         return "Report(t0={}, te={}, name={})".format(
